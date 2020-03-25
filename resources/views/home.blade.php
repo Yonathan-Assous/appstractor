@@ -101,12 +101,6 @@
 
   @section('scripts')
   <script>
-    var CONSTANT = {
-      "MY_TRIPS_COLUMN" : {
-        "COUNTRY":"name",
-        "DATE":"departure_date"
-      }
-    }
     var myTrips = [];
     var currentSort = {
       "sortBy":"",
@@ -129,8 +123,6 @@
           return 1;
         }
       });
-      console.log(currentSort.invertSort);
-      console.log(sortOrder);
 
       if (currentSort.invertSort) {
         $('#' + sortOrder + '_sort').removeClass().addClass('sort-desc');
@@ -138,7 +130,6 @@
       else {
         $('#' + sortOrder + '_sort').removeClass().addClass('sort-asc');
       }
-      console.log(currentSort.invertSort);
       showMyTrips(myTrips);
     }
 
